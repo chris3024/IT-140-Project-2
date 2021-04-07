@@ -8,7 +8,7 @@ A text adventure with objects you can pick up and put down.
 # update 9/1
 # create functions to develop code
 # testing new branches
-# trying to learn functions to clean code
+#gelp
 
 def show_instructions():
     print('\nGiant Troll Text Adventure')
@@ -42,12 +42,14 @@ while True:
     # get user input
     command = input('\nWhat direction do you go?\n').strip().lower()
     # movement
-    if command in directions:
-        if command in current_room:
-            current_room = rooms[current_room[command]]
-        else:
-            # bad movement
-            print("You can't go that way.")
+    if command.lower().split()[0] == 'go':
+        direction = command.lower().split()[1]
+        if direction in directions:
+            if direction in current_room:
+                current_room = rooms[current_room[direction]]
+            else:
+                # bad movement
+                print("You can't go that way.")
     # quit game
     elif command.lower() in ('q', 'quit'):
         break
