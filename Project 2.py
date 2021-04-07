@@ -6,6 +6,7 @@ A text adventure with objects you can pick up and put down.
 
 
 # update 9/1
+# create functions
 
 def show_instructions():
     print('\nGiant Troll Text Adventure')
