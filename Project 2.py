@@ -1,15 +1,21 @@
 # Christopher Sharp
 
-# A dictionary for the simplified dragon text game
+
 # The dictionary links a room to other rooms.
 rooms = {
-    'Great Hall': {'South': 'Bedroom'},
-    'Bedroom': {'North': 'Great Hall', 'East': 'Cellar'},
-    'Cellar': {'West': 'Bedroom'}
+    'Grand Foyer': {'East': 'Great Hall'},
+    'Great Hall': {'South': 'Common Room', 'North': 'Library', 'East': 'Classroom',
+                   'West': 'Grand Foyer', 'item': 'Pie'},
+    'Common Room': {'North': 'Great Hall', 'East': 'Dormitory', 'item': 'Scarf'},
+    'Dormitory': {'West': 'Common Room', 'item': 'Wand'},
+    'Library': {'South': 'Great Hall', 'East': 'Observatory', 'item': 'Book'},
+    'Observatory': {'West': 'Library', 'item': 'Invisibility Cloak'},
+    'Classroom': {'North': 'Dungeon', 'West': 'Great Hall', 'item': 'Potion'},
+    'Dungeon': {'South': 'Classroom', 'item': 'Giant Troll'}
 }
 
 # setting starting room
-starting_room = 'Great Hall'
+starting_room = 'Grand Foyer'
 
 # setting current room
 current_room = starting_room
