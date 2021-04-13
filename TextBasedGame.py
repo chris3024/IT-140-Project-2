@@ -7,7 +7,6 @@ def show_instructions():
     print("Add to Inventory: get 'item name'")
     print("-----------------------------------")
 
-
 def player_status(inventory, current_room, rooms):
     print('\nInventory:', inventory)
     print('You are in', current_room)
