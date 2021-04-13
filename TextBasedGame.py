@@ -8,13 +8,8 @@ def show_instructions():
     print("-----------------------------------")
 
 
-def get_item(rooms, current_room):
-    if 'item' in rooms[current_room]:
-        return rooms[current_room]['item']
-
-
 def player_status(inventory, current_room, rooms):
-    print('\nInventory', inventory)
+    print('\nInventory:', inventory)
     print('You are in', current_room)
     if 'item' in rooms[current_room]:
         print('You see a', rooms[current_room]['item'])
